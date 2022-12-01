@@ -9,9 +9,10 @@ pipeline {
         }
         stage ('docker-install') {
             steps {
-                sh 'cd docker-install'
                 sh 'sh docker.sh'
+                sh 'sudo reboot'
                 sh 'docker info'
+                
             }
         }
     }
